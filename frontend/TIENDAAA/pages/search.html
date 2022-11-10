@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../assets/css/style.css" />
+	<title>ECO-TIENDA: HOME</title>
+	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+	<nav class="navigation container">
+		<a href="./index.html">
+			<img src="../assets/images/logo.jpg" alt="Eco-tienda buena vida logo" class="navigation__logo" />
+		</a>
+		<div class="navigation-to-right">
+			<!-- Search bar -->
+			<form action="./search.html" class="navigation__search">
+				<input type="text" name="search-criteria" id="search-criteria" placeholder="¿Qué quieres comer hoy?" />
+
+				<img class="navigation__search-icon" src="../assets/icons/search.svg" alt="Search icon" />
+			</form>
+
+			<!-- Menu options -->
+			<ul class="navigation__options">
+				<li class="navigation__item dropdown__parent" id="my-account">
+					<a href="#">
+						<div class="navigation__option">
+							<img src="../assets/icons/person-border-green.svg" alt="Account icon" />
+							<p>Mi cuenta</p>
+						</div>
+					</a>
+				</li>
+				<li class="navigation__item" id="my-cart">
+					<a href="cart.html">
+						<div class="navigation__option">
+							<img src="../assets/icons/basket-border-green.svg" alt="Cart icon" />
+							<p>Mi carrito</p>
+						</div>
+						<span id="cart-span">3</span>
+					</a>
+				</li>
+				<li class="navigation__item">
+					<a href="logout.php">
+						<div class="navigation__option">
+							<img src="../assets/icons/heart-border-green.svg" alt="Logout icon" />
+							<p>Salir</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Products grid -->
+	<div class="container" id="search-layout">
+		<aside class="price-filter">
+			<form class="aside-form" id="aside-filter">
+				<div class="form-group">
+					<label class="form__label" for="price-range">Precio</label>
+					<input class="form__range" type="range" name="price-range" id="price-range" step="1" />
+				</div>
+				<div class="form-group form-group--fifty-container">
+					<div class="form-group--fifty">
+						<label class="form__label" for="from">Desde: </label>
+						<input type="number" class="form__input" placeholder="0€" id="from-input" step="1" />
+					</div>
+					<div class="form-group--fifty">
+						<label class="form__label" for="from">Hasta: </label>
+						<input type="number" class="form__input" placeholder="100€" id="to-input" step="1" />
+					</div>
+				</div>
+				<button class="btn btn--green btn--block" type="submit">Filtrar</button>
+			</form>
+		</aside>
+
+		<section class="container products" id="productsSection"></section>
+	</div>
+
+	<!-- Product description modal -->
+	<article class="container product-modal"></article>
+
+	<!-- User cart modal -->
+	<article class="container cart-modal">
+		<div class="cart-modal__header">
+			<h2 class="cart-modal__title"></h2>
+			<img src="../assets/icons/x-square-fill-green.svg" alt="Close dialog icon" id="cart-modal__close" />
+		</div>
+		<ul class="cart-modal__items" id="cart-list"></ul>
+
+		<div class="cart-modal__pricing-row">
+			<p>Subtotal</p>
+			<p id="cart-modal__subtotal-value">38,40 €</p>
+		</div>
+
+		<div class="cart-modal__pricing-row">
+			<p id="cart-modal__total-title">Total (IVA incluído)</p>
+			<p id="cart-modal__total-value">38,40 €</p>
+		</div>
+
+		<div class="cart-modal__free-ship" id="cart-modal__free-ship">
+			Te faltan 6,60 € para disfrutar del envío gratuito
+		</div>
+
+		<a href="./cart.html" class="btn btn--block btn--green">Ir al carito</a>
+		<button type="button" class="btn btn--block btn--green">Realizar pedido</button>
+	</article>
+	<!-- Pagination buttons -->
+	<div class="container">
+		<div class="page-controllers"></div>
+	</div>
+
+	<script src="../assets/javascript/pagination.js" type="module"></script>
+	<script src="../assets/javascript/dom.js" type="module"></script>
+	<script src="../assets/javascript/search.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<html lang="es" data-lt-installed="true"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>ECO-TIENDA: LOGIN</title>
+</head>
+<body>
+    <nav class="navigation container">
+        <a href="./index.html">
+            <img src="../assets/images/logo.jpg" alt="Eco-tienda buena vida logo" class="navigation__logo">
+        </a>
+        <div class="navigation-to-right">
+            <!-- Search bar -->
+            <form action="./search.html" class="navigation__search">
+                <input type="text" name="search-criteria" id="search-criteria" placeholder="¿Qué producto estás buscando...?">
+
+                <img class="navigation__search-icon" src="../assets/icons/search.svg" alt="Search icon">
+            </form>
+
+            <!-- Menu options -->
+            <ul class="navigation__options">
+                <li class="navigation__item">
+                    <a href="#"><div class="navigation__option">
+                            <img src="../assets/icons/heart-border-green.svg" alt="Favorites icon">
+                            <p>Mis favoritos</p>
+                        </div></a>
+                </li>
+                <li class="navigation__item dropdown__parent" id="my-account">
+                    <a href="#"><div class="navigation__option">
+                            <img src="../assets/icons/person-border-green.svg" alt="Account icon">
+                            <p>Mi cuenta</p>
+                        </div></a>
+                    <!-- Nested dropdown menu -->
+                    <ul class="account__options dropdown__child" id="my-account-dropbox">
+                        <li class="account__option">
+                            <a href="#">
+                                <img src="../assets/icons/person-fill-black.svg" alt="Account icon">Mi cuenta
+                            </a>
+                        </li>
+                        <li class="account__option">
+                            <a href="#"><img src="../assets/icons/heart-border-black.svg" alt="Favorites icon">
+                                Mis favoritos
+                            </a>
+                        </li>
+                        <li class="account__option">
+                            <a href="./cart.html">
+                                <img src="../assets/icons/check-black.svg" alt="Cart icon">Mi
+                                carrito
+                            </a>
+                        </li>
+                        <li class="account__option">
+                            <a href="./login.html">
+                                <img src="../assets/icons/lock-black.svg" alt="Log-in icon">Entrar</a>
+                        </li>
+                        <li class="account__option">
+                            <a href="./signup.html"><img src="../assets/icons/person-plus-black.svg" alt="Sign-up icon">Crear una cuenta</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navigation__item" id="my-cart">
+                    <a href="#"><div class="navigation__option">
+                            <img src="../assets/icons/basket-border-green.svg" alt="Cart icon">
+                            <p>Mi carrito</p>
+                        </div>
+                        <span id="cart-span">6</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form class="form-card" id="signup-form">
+            <h2 class="form-card__subtitle">Crear una nueva cuenta</h2>
+
+            <div class="form-card__group">
+                <label class="form-card__label" for="first-name">Nombre:</label>
+                <input class="form-card__input" type="text" name="first-name" id="first-name" placeholder="Nombres">
+                <p class="form-card__error">
+                    Los nombres solo puede contener de 5 a 40 letras.
+                </p>
+            </div>
+
+            <div class="form-card__group">
+                <label class="form-card__label" for="last-name">Apellido:</label>
+                <input class="form-card__input" type="text" name="last-name" id="last-name" placeholder="Apellidos">
+                <p class="form-card__error">
+                    Los apellildos solo puede contener de 5 a 40 letras.
+                </p>
+            </div>
+
+            <h2 class="form-card__subtitle">Información de inicio de sesión</h2>
+
+            <div class="form-card__group">
+                <label class="form-card__label" for="email">Email:</label>
+                <input class="form-card__input" type="text" name="email" id="email" placeholder="Email">
+                <p class="form-card__error">
+                    *El correo debe tener la forma username@domain.com
+                </p>
+            </div>
+            <div class="form-card__group">
+                <label class="form-card__label" for="password">Contraseña:</label>
+                <input class="form-card__input" type="password" name="password" id="password" placeholder="Contraseña">
+                <p class="form-card__error">
+                    *La contraseña debe tener mínimo 8 caracteres, una letra, un número y uno de
+                    los siguientes caracteres especiales: $ ! % * # ? &amp; / %
+                </p>
+            </div>
+            <div class="form-card__group">
+                <label class="form-card__label" for="password-2">Confirmación contraseña:</label>
+                <input class="form-card__input" type="password" name="password-2" id="password-2" placeholder="Repetir contraseña">
+                <p class="form-card__error">Ambas contraseñas deben ser iguales.</p>
+            </div>
+
+            <a href="./login.html" class="form-card__redirection">¿Ya tienes una cuenta? Inicia sesión</a>
+            <div class="cl"></div>
+
+            <div class="g-recaptcha" data-sitekey="6LfJL7UhAAAAADM3tmpoh3AcIYto_KqEyJI73U3C"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfJL7UhAAAAADM3tmpoh3AcIYto_KqEyJI73U3C&amp;co=aHR0cDovL3Bpc2VpLmJ1Y2FyYW1hbmdhLnVwYi5lZHUuY286ODA.&amp;hl=es-419&amp;v=jF-AgDWy8ih0GfLx4Semh9UK&amp;size=normal&amp;cb=89t8zjub8ko0" width="304" height="78" role="presentation" name="a-xc4orbua6yf6" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+
+            <div class="form-card__buttons">
+                <button class="btn btn--green btn--block" type="submit">Crear cuenta</button>
+                <button class="btn btn--blue btn--block" type="button">
+                    Accede con Facebook
+                </button>
+            </div>
+
+            <p class="form-card__error" id="form-error">
+                Rellene todos los campos del formulario correctamente antes de realizar el
+                envío.
+            </p>
+        </form>
+    </div>
+
+    <!-- User cart modal -->
+    <article class="container cart-modal">
+        <div class="cart-modal__header">
+            <h2 class="cart-modal__title"></h2>
+            <img src="../assets/icons/x-square-fill-green.svg" alt="Close dialog icon" id="cart-modal__close">
+        </div>
+        <ul class="cart-modal__items" id="cart-list"></ul>
+
+        <div class="cart-modal__pricing-row">
+            <p>Subtotal</p>
+            <p id="cart-modal__subtotal-value">38,40 €</p>
+        </div>
+
+        <div class="cart-modal__pricing-row">
+            <p id="cart-modal__total-title">Total (IVA incluído)</p>
+            <p id="cart-modal__total-value">38,40 €</p>
+        </div>
+
+        <div class="cart-modal__free-ship" id="cart-modal__free-ship">
+            Te faltan 6,60 € para disfrutar del envío gratuito
+        </div>
+
+        <a href="./cart.html" class="btn btn--block btn--green">Ir al carito</a>
+        <button type="button" class="btn btn--block btn--green">Realizar pedido</button>
+    </article>
+
+    <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/jF-AgDWy8ih0GfLx4Semh9UK/recaptcha__es_419.js" crossorigin="anonymous" integrity="sha384-fODvBIx6RJ9mIEutzOlHkJvIJqOJwSdvfsvszUA2zcGkCJQVb8dO5gQO5Y6gSwnP"></script><script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+    <script src="../assets/javascript/dom.js" type="module"></script>
+    <script src="../assets/javascript/validations/signup.js"></script>
+
+
+</body></html>
